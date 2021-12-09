@@ -71,7 +71,7 @@ for action in lines:
             fo.write('*')
 
     if action[0] == 'A':
-        a.min_heap_insert(l, int(action[2]))
+        a.min_heap_insert(l, int(action.split()[1]))
 
     if action[0] == 'D':
         x = int(action[2]) - 1
