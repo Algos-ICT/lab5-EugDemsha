@@ -75,7 +75,8 @@ for action in lines:
 
     if action[0] == 'D':
         x = int(action[2]) - 1
-        if lines[x-1][0] == "A":
-            if int(lines[x][2]) in l:
-                i = l.index(int(lines[x][2]))
+        if lines[x][0] == "A":
+            if int(lines[x].split()[1]) in l:
+                i = l.index(int(lines[x].split()[1]))
+                print(i)
                 a.heap_decrease_key(l, i, int(action[4]))
